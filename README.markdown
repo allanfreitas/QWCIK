@@ -2,7 +2,7 @@ QWCIK
 ======
 QWCIK is a clean & fresh pre-moduled CodeIgniter package for developers. The goal is to provide a ready-to-use CodeIgniter package with the most powerful libraries inside.
 
-Don't waste time to setup your #codeigniter project with all the libraries out there. We've selected and configured the best one so you can start your development right now.
+Don't waste time to setup your codeigniter project with all the libraries out there. We've selected and configured the best one so you can start your development right now.
 
 Features
 -------------
