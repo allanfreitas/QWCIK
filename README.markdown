@@ -1,11 +1,13 @@
 QWCIK
 ======
-QWCIK is a clean & fresh pre-moduled CodeIgniter installation. The goal is to provide a ready-to-use CodeIgniter Package with the most powerful libraries inside.
+QWCIK is a clean & fresh pre-moduled CodeIgniter package for developers. The goal is to provide a ready-to-use CodeIgniter package with the most powerful libraries inside.
+
+Don't waste time to setup your #codeigniter project with all the libraries out there. We've selected and configured the best one so you can start your development right now.
 
 Features
 -------------
 + CodeIgniter 1.7.2 Framework
-+ AutoForm from DB
++ AutoForm Generation from DB
 + Auto CRUD and Data Validation
 + Authentification with IonAuth
 + Template Library
@@ -13,7 +15,6 @@ Features
 + index.php removed
 + Jquery Javascript library
 + English & French Translation pre-installed
-
 
 Based On
 -------------
