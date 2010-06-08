@@ -39,7 +39,10 @@
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array();
+/*
+* 08/06/2010 - Added Database & Datamapper
+*/
+$autoload['libraries'] = array('database', 'datamapper');
 
 
 /*
