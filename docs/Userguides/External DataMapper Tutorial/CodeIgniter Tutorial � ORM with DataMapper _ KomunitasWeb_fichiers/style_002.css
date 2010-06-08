@@ -1,0 +1,314 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+
+body {
+    font-family:'GentiumAltRegular',Georgia, Times;
+    font-size:15px;   
+    line-height:21px; 
+    color:#222;
+    border-top:5px solid #000;
+}
+
+h2 {
+    padding:15px 0px;
+}
+
+h1 {
+    padding-bottom:20px;
+}
+
+a {
+    color:#aa0000;
+}
+
+a:hover {
+    color:#000;
+}
+
+.post {
+    margin-bottom:20px;
+}
+
+.post .entry {
+    padding-bottom:15px;
+}
+
+.post .entry .links {
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #ccc;
+    padding:4px 7px;
+    margin-top:12px;    
+}
+
+.post h4 {
+    margin: 6px 0px 7px;  
+    color:#111;
+    font-weight:normal;
+}
+
+.post h2 a {
+    text-decoration:none;
+}
+
+.post h2 a:hover {
+    text-decoration:underline;
+}
+
+.post ol, .post ul {
+    margin-left:20px;
+}
+
+.post li {
+    padding-bottom:9px;
+}
+
+.post p {
+    padding-bottom:12px;
+}
+
+.container {
+    width:960px;
+    margin:0 auto;
+}
+
+.container #header {
+    padding:10px 0px;
+    border-bottom:1px solid #bbb;
+}   
+
+h1, h2, h3, h4 {
+    color:#222;
+}
+
+#wrapper {
+    overflow:hidden;
+}
+
+#header {
+    padding:7px 0px;
+    border-bottom:1px solid #000;
+}
+
+#header ul li {
+    display:inline;
+    margin-right:45px;
+}
+
+#header a {
+    text-decoration:none;
+    color:#000;
+}
+
+#header a:hover {
+    text-decoration:underline;
+    color:#f00;
+}
+
+#wrapper-dock {
+    border-bottom:1px solid #e1e1e1;
+    padding:15px 0px;
+}
+
+#content {
+    float:left;
+    width:616px;
+    padding-top:15px;
+}
+
+#content img {
+    padding:4px;
+    border:1px solid #CCCCCC;
+}
+
+ul.list li {
+    padding-bottom:0px;
+}
+
+.list {
+    margin-bottom:19px;
+}
+
+#content img.alignleft {
+    float:left;
+    margin:15px 18px 0px 0px;
+}
+
+#content h2 {
+    font-size:22px;
+}
+
+#content h3 {
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+#sidebar {
+    float:right;
+    width:300px;
+    padding-top:15px;
+}
+
+#sidebar ul li.widget {
+    list-style:none;
+    margin-bottom:20px;
+}
+
+#sidebar ul li.widget ul {
+    padding-left:15px;
+}
+
+#sidebar ul li.widget ul li {
+    margin-bottom:5px;
+}
+
+
+.box {
+    margin-bottom:24px;
+}
+
+.box h4 {
+    margin-bottom:5px;
+}
+
+.box img {
+    padding:3px;
+    background:#e1e1e1;
+    border:1px solid #ccc;
+    margin-right:12px;
+    margin-bottom:12px;
+}
+
+ul#archieve, ul#older, ul#comments {
+    list-style:none;
+}
+
+textarea#comment {
+    width:95%;
+}
+
+table {
+    margin-bottom:9px;
+}
+
+#footer {
+    padding:20px 0px 10px 0px;
+}
+
+#content iframe {
+    padding:3px 4px;
+    background:#fff;
+}
+
+.adsense {
+    margin:10px 0px;
+}
+
+#similar-post {
+    border:1px solid #ccc;
+    background:#e1e1e1;
+    padding:4px 7px;
+    margin-top:12px;    
+}
+
+#similar-post h3 {
+    margin-top:7px;
+}
+
+
+blockquote {
+	margin:0 auto 10px; 
+	padding:5px 20px;
+	width:80%; 	
+	background:#e1e1e1;
+}
+
+.comment {
+    border-bottom:1px solid #d0cdba;
+    padding:10px;
+}
+
+#comment-1 {
+    border-top:1px solid #d0cdba;
+}
+
+.comment-1 {
+    background:#EDEBDE;
+}
+
+.comment-0 {
+    background:#f8f7ee;
+}
+
+#twitter img {
+    border:none;
+}
+
+table {
+
+}
+
+table td, table th{
+    padding:4px;
+}
+
+#older-post li {
+    border-bottom:1px solid #e1e1e1;
+    width:616px;
+    overflow:hidden;
+    padding:5px 0px;
+}
+#older-post a {
+    text-decoration:none;
+}
+
+#older-post img {
+    vertical-align:text-top;
+    padding:0px;
+    border:none;
+}
+
+
+
+#older-post .link {
+    display:block;
+    float:left;
+    width:450px;
+}
+
+#older-post .date {
+    display:block;
+    float:left;
+    width:100px;
+}
+
+#older-post .comment {
+    border:none;
+    display:block;
+    float:right;
+    padding:0px;
+}
+
+.wp-pagenavi {
+    margin-top:20px;
+}
+
+.postauthor {
+    margin-bottom:25px;
+    overflow:hidden;
+}
+
+.postauthor img {
+float:left;
+margin-right:10px;
+}
+
+.alignright {
+    float:right;
+    margin:10px 0 8px 20px;
+}
+
+#wp125adwrap_2c { width:100%; }
+#wp125adwrap_2c .wp125ad { width:125px; float:left; padding-right:20px; }

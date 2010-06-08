@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Welcome to CodeIgniter</title>
+<title>Welcome to QWCIK</title>
 
 <style type="text/css">
 
@@ -43,7 +43,7 @@ code {
 </head>
 <body>
 
-<h1>Welcome to CodeIgniter!</h1>
+<h1>Welcome to QWCIK!</h1>
 
 <p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 

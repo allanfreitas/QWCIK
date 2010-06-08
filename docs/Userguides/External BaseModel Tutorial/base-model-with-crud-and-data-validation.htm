@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+<!-- Meta data -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+				<script type="text/javascript">
+					var APPPATH_URI = "/application/";
+					var BASE_URI = "/";
+				</script>
+		<link rel="canonical" 
+href="http://dhorrigan.com.roy.getcloudigniter.com/news/2010/04/base-model-with-crud-and-data-validation">
+		<link rel="alternate" type="application/rss+xml" title="Dan Horrigan" 
+href="http://dhorrigan.com.roy.getcloudigniter.com/news/rss/all.rss">
+		<meta name="description" content="If you don't currently use a Base 
+Model, you don't know what you are   missing.  A while back I started 
+using Jamie Rumbelow's MY_Model and it   has been amazing.  His Model 
+adds a bunch (about 18) CRUD functions.    How does this make your life 
+easier?">
+		<meta name="keywords" content="Base, Model, with, CRUD, and, Data, 
+Validation">
+<title>Dan Horrigan | Base Model with CRUD and Data Validation | 
+Actualités</title>
+
+<!-- CSS Stylesheets -->
+<link href="base-model-with-crud-and-data-validation_fichiers/grid.css" 
+type="text/css" rel="stylesheet">
+
+<link 
+href="base-model-with-crud-and-data-validation_fichiers/default.css" 
+type="text/css" rel="stylesheet">
+
+<link 
+href="base-model-with-crud-and-data-validation_fichiers/shCore.css" 
+type="text/css" rel="stylesheet">
+
+<link 
+href="base-model-with-crud-and-data-validation_fichiers/shThemeDefault.css"
+ type="text/css" rel="stylesheet">
+
+
+<!-- JavaScripts -->
+<script type="text/javascript" src="base-model-with-crud-and-data-validation_fichiers/shCore.js"></script>
+
+<script type="text/javascript" src="base-model-with-crud-and-data-validation_fichiers/shBrushPhp.js"></script>
+
+<script type="text/javascript"> SyntaxHighlighter.all(); </script>
+
+<style type="text/css">#imdb_link {background:transparent url(http://i42.tinypic.com/21e7rl2.png) no-repeat scroll 0% 50%;padding-left:71px;}</style><script>try {  for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){    var lastpass_f = document.forms[lastpass_iter];    if(typeof(lastpass_f.lpsubmitorig)=="undefined"){      if (typeof(lastpass_f.submit) == "function") {        lastpass_f.lpsubmitorig = lastpass_f.submit;        lastpass_f.submit = function(){          var form = this;          try {            if (document.documentElement && 'createEvent' in document)            {              var forms = document.getElementsByTagName('form');              for (var i=0 ; i<forms.length ; ++i)                if (forms[i]==form)                {                  var element = document.createElement('lpformsubmitdataelement');                  element.setAttribute('formnum',i);                  element.setAttribute('from','submithook');                  document.documentElement.appendChild(element);                  var evt = document.createEvent('Events');                  evt.initEvent('lpformsubmit',true,false);                  element.dispatchEvent(evt);                  break;                }            }          } catch (e) {}          try {            form.lpsubmitorig();          } catch (e) {}        }      }    }  }} catch (e) {}</script></head><body>
+	<div class="row">
+		<div id="header" class="column grid_12">
+			<div id="hosting"><a 
+href="http://www.getcloudigniter.com/partner/dhorrigan" target="_blank">Hosting
+ Provided by CloudIgniter</a></div>
+<h1>Dan Horrigan</h1>
+			<p class="slogan">A PHP developer with nothing better to do.</p>
+			<div id="top-navigation">
+				<ul class="navigation">
+			<li><a href="http://dhorrigan.com/" target="_self">Home</a></li>
+			<li><a href="http://dhorrigan.com/code" target="_self">Code</a></li>
+			<li><a href="http://dhorrigan.com/services" target="_self">Services</a></li>
+	</ul>
+			</div>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="column grid_12"><img 
+src="base-model-with-crud-and-data-validation_fichiers/main.png" 
+class="padded-border">
+</div>
+	</div>
+	<div class="row">
+		<div id="content" class="column grid_12">
+			<h2>Base Model with CRUD and Data Validation</h2>
+	<p>Envoyé à Apr 19, 2010</p>
+
+<p></p>
+<p>If you don't currently use a Base Model, you don't know what you are 
+ missing.  A while back I started using Jamie Rumbelow's MY_Model and it
+  has been amazing.  His Model adds a bunch (about 18) CRUD functions.  
+ How does this make your life easier?  lets give an example:</p>
+<p>Lets say you have categories table in your database. &nbsp;Typically,
+ you  have to create the model and all the CRUD functions. &nbsp;With 
+the Base  Model all you have to do is extend MY_Model, and that is 
+basically it:</p>
+<div class="syntaxhighlighter  php" id="highlighter_605048"><div 
+class="bar     "><div class="toolbar"><a class="item viewSource" 
+style="width: 16px; height: 16px;" title="view source" 
+href="#viewSource">view source</a><a class="item printSource" 
+style="width: 16px; height: 16px;" title="print" href="#printSource">print</a><a
+ class="item about" style="width: 16px; height: 16px;" title="?" 
+href="#about">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td
+ class="number"><code>1</code></td><td class="content"><code class="php 
+keyword">class</code> <code class="php plain">Category_m </code><code 
+class="php keyword">extends</code> <code class="php plain">MY_Model {</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php keyword">function</code> <code class="php plain">__construct()</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">{</code></td></tr></tbody></table></div><div 
+class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">parent::__construct();</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">}</code></td></tr></tbody></table></div><div 
+class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td
+ class="content"><code class="php plain">}</code></td></tr></tbody></table></div></div></div>
+<p>Now, if you want to insert a new Category, you just have to do this 
+in your Controller:</p>
+<div class="syntaxhighlighter  php" id="highlighter_62125"><div 
+class="bar"><div class="toolbar"><a class="item viewSource" 
+style="width: 16px; height: 16px;" title="view source" 
+href="#viewSource">view source</a><a class="item printSource" 
+style="width: 16px; height: 16px;" title="print" href="#printSource">print</a><a
+ class="item about" style="width: 16px; height: 16px;" title="?" 
+href="#about">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td
+ class="number"><code>1</code></td><td class="content"><code class="php 
+variable">$this</code><code class="php plain">-&gt;load-&gt;model(</code><code
+ class="php string">'Category_m'</code><code class="php plain">, </code><code
+ class="php string">'category'</code><code class="php plain">);</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td
+ class="content"><code class="php plain">insert_id = </code><code 
+class="php variable">$this</code><code class="php plain">-&gt;category-&gt;insert(</code><code
+ class="php variable">$_POST</code><code class="php plain">);</code></td></tr></tbody></table></div></div></div>
+<p>That's it (although you would want to clean the POST data first)!</p>
+<p>What could make this better? How about automatic validation of the 
+data you send it? I have in-fact added this functionality to the Base 
+Model. It can be found here: <a 
+href="http://bitbucket.org/dhorrigan/codeigniter-base-model/src">Click 
+Here</a></p>
+<p>Here is the basic usage (we will use the categories model from 
+above):</p>
+<div class="syntaxhighlighter  php" id="highlighter_119839"><div 
+class="bar                 "><div class="toolbar"><a class="item 
+viewSource" style="width: 16px; height: 16px;" title="view source" 
+href="#viewSource">view source</a><a class="item printSource" 
+style="width: 16px; height: 16px;" title="print" href="#printSource">print</a><a
+ class="item about" style="width: 16px; height: 16px;" title="?" 
+href="#about">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td
+ class="number"><code>01</code></td><td class="content"><code class="php
+ keyword">class</code> <code class="php plain">Category_m </code><code 
+class="php keyword">extends</code> <code class="php plain">MY_Model</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td
+ class="content"><code class="php plain">{</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php keyword">protected</code> <code class="php variable">$validate</code>
+ <code class="php plain">= </code><code class="php keyword">array</code><code
+ class="php plain">(</code></td></tr></tbody></table></div><div 
+class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php keyword">array</code><code class="php plain">(</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php string">'field'</code> <code class="php plain">=&gt; </code><code
+ class="php string">'name'</code><code class="php plain">,</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php string">'label'</code> <code class="php plain">=&gt; </code><code
+ class="php string">'Name'</code><code class="php plain">,</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php string">'rules'</code> <code class="php plain">=&gt;</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php string">'required|alpha_dash'</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">),</code></td></tr></tbody></table></div><div 
+class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php keyword">array</code><code class="php plain">(</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php string">'field'</code> <code class="php plain">=&gt; </code><code
+ class="php string">'description'</code><code class="php plain">,</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php string">'label'</code> <code class="php plain">=&gt; </code><code
+ class="php string">'Description'</code><code class="php plain">,</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php string">'rules'</code> <code class="php plain">=&gt; </code><code
+ class="php string">'required'</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">)</code></td></tr></tbody></table></div><div 
+class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">);</code></td></tr></tbody></table></div><div 
+class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php keyword">function</code> <code class="php plain">__construct()</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">{</code></td></tr></tbody></table></div><div 
+class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">parent::__construct();</code></td></tr></tbody></table></div><div
+ class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">}</code></td></tr></tbody></table></div><div 
+class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td
+ class="content"><code class="php plain">}</code></td></tr></tbody></table></div></div></div>
+<p>Let me explain. The protected $validate variable is an array of 
+form_validation rules. See the <a 
+href="http://codeigniter.com/user_guide/libraries/form_validation.html">User
+ Guide</a> for more information on those.</p>
+<p>Now, when you try to insert or update anything into the table, it 
+will run the form validation first, then return false if it fails. Here 
+is how you use it in the controller (using the Categories example):</p>
+<div class="syntaxhighlighter  php" id="highlighter_474095"><div 
+class="bar      "><div class="toolbar"><a class="item viewSource" 
+style="width: 16px; height: 16px;" title="view source" 
+href="#viewSource">view source</a><a class="item printSource" 
+style="width: 16px; height: 16px;" title="print" href="#printSource">print</a><a
+ class="item about" style="width: 16px; height: 16px;" title="?" 
+href="#about">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td
+ class="number"><code>1</code></td><td class="content"><code class="php 
+variable">$this</code><code class="php plain">-&gt;load-&gt;model(</code><code
+ class="php string">'Category_m'</code><code class="php plain">, </code><code
+ class="php string">'category'</code><code class="php plain">);</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td
+ class="content"><code class="php keyword">if</code><code class="php 
+plain">(</code><code class="php variable">$this</code><code class="php 
+plain">-&gt;category-&gt;insert(</code><code class="php variable">$_POST</code><code
+ class="php plain">))</code></td></tr></tbody></table></div><div 
+class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td
+ class="content"><code class="php plain">{</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td
+ class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code
+ class="php plain">redirect(</code><code class="php string">'success'</code><code
+ class="php plain">);</code></td></tr></tbody></table></div><div 
+class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td
+ class="content"><code class="php plain">}</code></td></tr></tbody></table></div><div
+ class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td
+ class="content"><code class="php variable">$this</code><code class="php
+ plain">-&gt;load-&gt;view(</code><code class="php string">'add_category'</code><code
+ class="php plain">);</code></td></tr></tbody></table></div></div></div>
+<p>This will tell it to insert the data, if it passes validation, then 
+it will redirect to the success page, else it will reload the form.</p>
+<p><strong>New Features Added (4/20): </strong> <br> - You can now set 
+$validate to a string containing the name of a validation group set in 
+you config file (Again, see the user guide for more info on Rule 
+Groups).  <br> - You can now skip validation if you choose. You do this 
+by addig an additional parameter to your insert and update calls (except
+ for update_by()). Example:</p>
+<div class="syntaxhighlighter  php" id="highlighter_127243"><div 
+class="bar  "><div class="toolbar"><a class="item viewSource" 
+style="width: 16px; height: 16px;" title="view source" 
+href="#viewSource">view source</a><a class="item printSource" 
+style="width: 16px; height: 16px;" title="print" href="#printSource">print</a><a
+ class="item about" style="width: 16px; height: 16px;" title="?" 
+href="#about">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td
+ class="number"><code>1</code></td><td class="content"><code class="php 
+variable">$this</code><code class="php plain">-&gt;category-&gt;insert(</code><code
+ class="php variable">$data</code><code class="php plain">, TRUE);</code></td></tr></tbody></table></div></div></div>
+<p>If the parameter is TRUE it will skip the validation.</p>
+<p>For the update_by() function you must use a chained function to kip 
+the validation (because the function accepts an undefined number of 
+parameters). Example:</p>
+<div class="syntaxhighlighter  php" id="highlighter_748371"><div 
+class="bar          "><div class="toolbar"><a class="item viewSource" 
+style="width: 16px; height: 16px;" title="view source" 
+href="#viewSource">view source</a><a class="item printSource" 
+style="width: 16px; height: 16px;" title="print" href="#printSource">print</a><a
+ class="item about" style="width: 16px; height: 16px;" title="?" 
+href="#about">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td
+ class="number"><code>1</code></td><td class="content"><code class="php 
+variable">$this</code><code class="php plain">-&gt;category-&gt;skip_validation()-&gt;update_by(</code><code
+ class="php string">'id ='</code><code class="php plain">, </code><code 
+class="php variable">$id</code><code class="php plain">, </code><code 
+class="php variable">$data</code><code class="php plain">)</code></td></tr></tbody></table></div></div></div>
+<p>This will only skip it for the command you are running, it will be 
+re-enabld automatically when it is complete.</p>
+<p>Hope this helps some people out. If you have any question leave a 
+comment.</p>
+<p><a href="http://bitbucket.org/dhorrigan/codeigniter-base-model/src">Click
+ here to view the Base Model on Bit Bucket.</a></p>
+<p></p><div class="comments">
+	<h3>Commentaires</h3>
+			<p>Il n'y pas de commentaires</p>
+		<h3>Leave a Comment</h3>
+<form 
+action="http://dhorrigan.com.roy.getcloudigniter.com/comments/create/news/4"
+ method="post">	
+<input name="redirect_to" 
+value="/news/2010/04/base-model-with-crud-and-data-validation" 
+type="hidden">
+	
+	<noscript>
+		<input type="text" name="d0ntf1llth1s1n" value="" style="display:none" />	</noscript>
+		
+	<ul id="comment-form">
+				<li>
+			<label for="name">Votre Nom:</label>
+			<input name="name" id="name" maxlength="40" type="text">
+		</li>
+		
+		<li>
+			<label for="email">Adresse e-Mail:</label>
+			<input name="email" maxlength="40" type="text">
+		</li>
+				
+		<li>
+			<label for="message">Message:</label>
+			<textarea name="comment" rows="5" cols="30"></textarea>
+		</li>
+		
+		<li>
+			<label for="website">Site Internet:</label>
+			<input name="website" maxlength="40" type="text">
+		</li>
+		
+		<li><input name="btnSend" value="Commentaire" class="pyro-button" 
+type="submit"></li>
+	</ul>
+</form></div>
+		</div>
+	</div>
+	<div class="row">
+		<div id="footer" class="column grid_12">
+			<p>Copyright ©2010 Dan Horrigan</p>
+<p>Powered by <a href="http://pyrocms.com/" target="_blank">PyroCMS</a></p>
+<p><small>Elapsed Time: 0.1445 - Memory: 6.36MB</small></p>
+
+		</div>
+	</div>
+</body></html>

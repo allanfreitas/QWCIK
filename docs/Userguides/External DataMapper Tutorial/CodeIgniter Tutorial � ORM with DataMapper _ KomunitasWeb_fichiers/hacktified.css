@@ -1,0 +1,186 @@
+.wp_syntax {
+  background-color: #161616;
+  border: 1px solid #666;
+  margin: 0 0 1.5em 0;
+  overflow: auto;
+  margin-top:10px;
+}
+
+/* IE FIX */
+.wp_syntax {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: expression(this.scrollWidth > this.offsetWidth ? 15 : 0);
+  width: 100%;
+}
+
+.wp_syntax table {
+  border-collapse: collapse;
+}
+
+.wp_syntax div, .wp_syntax td {
+  vertical-align: top;
+  padding: 2px 4px;
+}
+
+.wp_syntax .line_numbers {
+  text-align: right;
+  background-color: #333;
+  color: #666;
+  overflow: visible;
+}
+
+.wp_syntax .code {
+  background-color: #161616;
+}
+
+/* potential overrides for other styles */
+.wp_syntax pre {
+  margin: 0;
+  width: auto;
+  float: none;
+  clear: none;
+  overflow: visible;
+  font-family: Consolas, Lucida Console, Monaco, monospace;
+  font-size: 11px;
+}
+
+
+/* global styles, can be overridden per-language using CSS inheritance */
+
+/*  these are for a black background  */
+
+/* default styles-- non-keywords, etc. */
+.de1 { color: #ddd }
+.de2 { color: #bbb }
+
+/* language keywords... some languages have more than others. yellowish. */
+.kw1 {color: #ee9; }
+.kw2 {color: #c96; font-weight: bold; }
+.kw3 {color: #fd6; }
+.kw4 {color: #F83; font-weight: bold;}
+
+/* various kinds of comments.  greenish. */
+.co0 {color: #6d6; font-style: italic}
+.co1 {color: #7d7; font-style: italic}
+.co2 {color: #8d8; font-style: italic}
+.co3 {color: #9d9; font-style: italic}
+.co4 {color: #ada; font-style: italic}
+.coMULTI {color: #bdb; font-style: italic;}   /* multi-line comments */
+
+/* strings - blueish */
+.st0 {color: #abe}
+.st_h {color: #9ae} /* "hard" strings (usu. singlequotes) */
+
+/* escape characters ESCAPE_CHAR */
+.es0 {color: #e3e}
+.es_h {color: #909} /* in "hard" strings */
+
+
+/* brackets, braces, and the like */
+.br0 {color: #fff}
+
+/* symbolses */
+.sy0 {color: #eff; } 
+.sy1 {color: #aff; background-color: #039 } 
+
+/* numbers */
+.nu0 {color: #e66}
+.nu8 {color: #cc6} /* octal - GESHI_NUMBER_OCT_PREFIX */
+.nu12 {color: #6cc} /* hex - GESHI_NUMBER_HEX_PREFIX */
+.nu19 {color: #c6c} /* scientific- GESHI_NUMBER_FLT_SCI_ZERO */
+
+/* methods - light */
+.me1 {color: #eed; font-weight: bold}
+.me2 {color: #ccb}
+
+/* misc other regexp-based constructs, differ widely by language */
+.re0 {color: #fff; font-weight: bold} /* variables, in most langs  */
+.re1 {color: #ccc; font-weight: bold}
+.re2 {color: #fff}
+.re3 {color: #fff}
+.re4 {color: #fff}
+.re5 {color: #fff}
+.re6 {color: #fff}
+.re7 {color: #fff}
+.re8 {color: #fff}
+.re9 {color: #fff}
+
+/* links, for if you've got documentation linkage turned on */
+a {
+   text-decoration: none
+}
+
+
+/* special diff colors to sort of make sense... see wp-syntax/geshi/geshi/diff.php */
+.diff .kw1 {color: #aaaaaa; font-style: italic;}
+.diff .re0 {color: #440088;}
+.diff .re1 {color: #ff3333;}
+.diff .re2 {color: #00b000;}
+.diff .re3 {color: #f96;}
+.diff .re4 {color: #9f9;}
+.diff .re5 {color: #0011dd;}
+.diff .re6 {color: #96f;}
+.diff .re7 {color: #f66;}
+.diff .re8 {color: #5f5;}
+.diff .re9 {color: #888822;}
+
+
+
+/* examples of per-language overrides, from the symfony project */
+
+/* .php .imp {font-weight: bold; color: red} */
+/*   .php .kw1 {color: #FF8400} */
+/*   .php .kw2 {color: #FFCC66} */
+/*   .php .kw3 {color: #07DFFC} */
+/*   .php .co1 {color: #BD48B3; font-style: italic} */
+/*   .php .co2 {color: #BD48B3; font-style: italic} */
+/*   .php .coMULTI {color: #BD48B3; font-style: italic} */
+/* .php .es0 {color: #ddd} */
+/*   .php .br0 {color: #fff} */
+/*   .php .st0 {color: #99FF00} */
+/*   .php .nu0 {color: #66CC66} */
+/*   .php .me1 {color: #FFCC66} */
+/*   .php .me2 {color: #FFCC66} */
+/*   .php .re0 {color: #fff} */
+/*   .php a {text-decoration: none} */
+
+/* .xml .imp {font-weight: bold; color: red} */
+/*   .xml .coMULTI {color: #BD48B3; font-style: italic} */
+/* .xml .es0 {color: #0000aa; font-weight: bold} */
+/* .xml .br0 {color: #66cc66} */
+/*   .xml .st0 {color: #99FF00} */
+/* .xml .nu0 {color: #cc66cc} */
+/* .xml .sc0 {color: #00bbdd} */
+/* .xml .sc1 {color: #ddbb00} */
+/* .xml .sc2 {color: #339933} */
+/*   .xml .sc3 {color: #fff} */
+/*   .xml .re0 {color: #FFFF99} */
+/*   .xml .re1 {color: #FFCC66} */
+/*   .xml .re2 {color: #FFCC66} */
+
+/* .css .imp {font-weight: bold; color: red} */
+/* .css .kw1 {color: #fff} */
+/* .css .kw2 {color: #993333} */
+/* .css .co1 {color: #a1a100} */
+/* .css .coMULTI {color: #808080; font-style: italic} */
+/* .css .es0 {color: #000099; font-weight: bold} */
+/* .css .br0 {color: #66cc66} */
+/* .css .st0 {color: #ff0000} */
+/* .css .nu0 {color: #cc66cc} */
+/* .css .re0 {color: #cc00cc} */
+/* .css .re1 {color: #6666ff} */
+/* .css .re2 {color: #3333ff} */
+
+/* .javascript .imp {font-weight: bold; color: red} */
+/*   .javascript .kw1 {color: #FF8400} */
+/*   .javascript .kw2 {color: #FFCC66} */
+/*   .javascript .kw3 {color: #07DFFC} */
+/*   .javascript .co1 {color: #BD48B3; font-style: italic} */
+/*   .javascript .coMULTI {color: #BD48B3; font-style: italic} */
+/* .javascript .es0 {color: #000099} */
+/*   .javascript .br0 {color: #fff} */
+/*   .javascript .st0 {color: #99FF00} */
+/*   .javascript .nu0 {color: #66CC66} */
+/*   .javascript .me1 {color: #FFCC66} */
+/*   .javascript .re0 {color: #fff} */

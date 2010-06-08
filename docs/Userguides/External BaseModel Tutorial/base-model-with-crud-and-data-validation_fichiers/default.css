@@ -1,0 +1,223 @@
+/* General */
+
+p,div,span,body {
+	font-size: 13px;
+	font-family: Lucida, sans-serif;
+	color: #434343;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	border-top: 3px solid #424242;
+}
+
+#content {
+}
+
+#spacer_div
+{
+	height: 1px;
+}
+
+a {
+	color: #3d9fe7;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font: bold 36px Times New Roman, Times, serif;
+	margin: 32px 0 0 0;
+}
+
+h2 {
+	font: bold 30px Times New Roman, Times, serif;
+	margin: 12px 0 18px 0;
+}
+
+h3 {
+	font: bold 16px Times New Roman, Times, serif;
+	margin: 0 0 5px 0;
+}
+
+h4 {
+	font: bold 14px Times New Roman, Times, serif;
+	margin: 0 0 5px 0;	
+}
+
+/* Header */
+
+#header {
+	margin-bottom: 15px;
+}
+
+.slogan {
+	margin: 2px 0 0 0;
+}
+
+#hosting {
+	float: right;
+	margin: 32px 0 0 0;
+}
+#hosting a {
+	background: url(../img/cloudigniter.png);
+	display: block;
+	clear: both;
+	height: 60px;
+	width: 161px;
+	text-indent: -9999px;
+	overflow: hidden;
+	outline: none;
+}
+/* Icons */
+
+.icon img {
+	float: left;
+	margin-right: 7px;
+}
+
+.icon a {
+	margin-top: 1px;
+	display: block;
+	float: left;
+	font-weight: bold;
+}
+
+/* Images */
+
+img.padded-border {
+	padding: 9px;
+	border: 1px solid #D5D5D5;
+}
+
+/* Navigation */
+
+#top-navigation {
+	background-color: #F0F0F0;
+	height: 46px;
+	margin: 15px 0 0 0;
+}
+
+#top-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#top-navigation li {
+	display: inline;
+}
+
+#top-navigation a {
+	display: block;
+	float: left;
+	margin: 0px;
+	padding: 16px 20px;
+	border-right: 1px solid #D6D6D6;
+	font: bold 13px Lucida, sans-serif;
+	text-decoration: none;
+	color: #434343;
+}
+#top-navigation a:hover, #top-navigation li.current a {
+	background-color: #5F5F5F;
+	color: #FFFFFF;
+}
+
+/* Footer */
+
+#footer {
+	margin-top: 32px;
+	border-top: 2px solid #424242;
+	padding-top: 5px;
+	text-align: center;
+}
+
+/* News */
+
+.post {
+	border-bottom: 1px solid #D5D5D5;
+	padding-bottom: 10px;
+	margin: 0 0 20px 0;
+}
+
+.post h3 {
+	font-family: Lucida, sans-serif;
+	text-decoration: none;
+	margin: 0 0 3px 0;
+}
+
+.post .meta {
+	font-size: 11px;
+	margin: 0px;
+}
+
+/* Comments */
+ul#comment-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+ul#comment-list li {
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #D5D5D5;
+	margin-bottom: 18px;
+}
+
+ul#comment-list li .gravatar {
+	float: left;
+	margin-right: 8px;
+}
+
+ul#comment-list li h4 {
+	margin: 0 0 2px 0;
+}
+
+ul#comment-list li .meta {
+	margin: 0 0 18px 0;
+	font-size: 11px;
+}
+ul#comment-form {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+ul#comment-form li {
+	padding: 0 0 15px 0;
+}
+
+ul#comment-form li label {
+	display: block;
+	float: left;
+	width: 100px;
+	padding: 4px 0px;
+}
+
+ul#comment-form li input {
+	width: 200px;
+}
+
+ul#comment-form li textarea {
+	width: 400px;
+	height: 150px;
+}
+
+ul#comment-form li input.pyro-button {
+	width: auto;
+}
+/* Archive */
+
+ul.archive {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.archive li {
+	padding: 4px 0;
+}
