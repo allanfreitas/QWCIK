@@ -39,10 +39,7 @@
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-/*
-* 08/06/2010 - Added Database & Datamapper
-*/
-$autoload['libraries'] = array('database', 'datamapper');
+$autoload['libraries'] = array('database','template','form_validation','session');
 
 
 /*
@@ -54,7 +51,7 @@ $autoload['libraries'] = array('database', 'datamapper');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array('url','file');
 
 
 /*
@@ -111,7 +108,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array('');
 
 
 

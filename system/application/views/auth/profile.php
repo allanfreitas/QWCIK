@@ -1,0 +1,1 @@
+<h1>Profil : <?php echo $this->ion_auth->get_user()->username; ?> </h1>

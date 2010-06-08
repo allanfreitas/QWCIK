@@ -43,13 +43,15 @@
 $route['default_controller'] = "welcome";
 $route['scaffolding_trigger'] = "";
 
+/**
+ * Routes for naviaguation optimisation
+ */
 
-// BEGIN AUTHENTICATION LIBRARY ROUTES
-$route['login'] = "admin/admin/login";
-$route['logout'] = "admin/admin/logout";
-$route['register'] = "admin/admin/register";
-$route['admin/dashboard'] = "admin/admin/index";
-// END AUTHENTICATION LIBRARY ROUTES
+$route['profile'] = "auth/profile";
+$route['login'] = "auth/login";
+$route['logout'] = "auth/logout";
+$route['register'] = "auth/register";
+$route['admin'] = "auth/admin";
 
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */

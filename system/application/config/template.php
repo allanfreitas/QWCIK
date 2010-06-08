@@ -56,15 +56,17 @@ $template['active_template'] = 'default';
 |--------------------------------------------------------------------------
 */
 
-$template['default']['template'] = 'template';
-$template['default']['regions'] = array(
-   'header',
-   'content',
-   'footer',
-);
+$template['default']['template'] = '/template/template';
+
 $template['default']['parser'] = 'parser';
 $template['default']['parser_method'] = 'parse';
 $template['default']['parse_template'] = FALSE;
+
+$template['default']['regions']['header'] = array('content' => array('<h1>Welcome to QWCIK!</h1>'));
+$template['default']['regions']['content'] = array('content' => array('<p>If you would like to edit the default template you\'ll find it located at:</p>
+<code>system/application/views/template/template.php</code><p>Here are the default routes. <ul>From the Auth Controller :<li>'.anchor('/login','/login').'</li><li>'.anchor('/logout','/logout').'</li><li>'.anchor('/register','/register').'</li><li>'.anchor('/profile','/profile').'</li></ul><ul> From the Welcome Controller :<li>'.anchor('/welcome','welcome/').'</li></ul></p>'));
+$template['default']['regions']['sidebar'] = array('content' => array('<p>The page  is being generated dynamically by CodeIgniter based on the Template Library</p>'));
+$template['default']['regions']['footer'] = array('content' => array('<p>Assembled by <a href="http://twitter.com/AlexisSerneels">Alexis Serneels</a></p>'));
 
 /* End of file template.php */
 /* Location: ./system/application/config/template.php */
