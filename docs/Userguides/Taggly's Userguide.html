@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><title>Taggly - User Guide</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style>
+  body {
+   margin: 0;
+   padding: 0;
+   font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+   font-size: 14px;
+   color: #4F5155;
+   background: #fff url(images/background.jpg) repeat-x left top;
+  }
+
+  a {
+   color: #003399;
+   background-color: transparent;
+   text-decoration: none;
+   font-weight: normal;
+  }
+  a:visited {
+   color: #003399;
+   background-color: transparent;
+   text-decoration: none;
+  }
+  a:hover {
+   color: #000;
+   text-decoration: none;
+   background-color: transparent;
+  }
+
+  #content {
+   margin: 20px 40px 0 40px;
+   padding: 0;
+  }
+
+  #content p {
+   margin: 10px 20px 12px 0;
+  }
+
+  #content h1 {
+  color: #333;
+  background: #eee;
+  font-weight: normal;
+  font-size: 22px;
+  margin: 0 0 15px 0;
+  padding: 5px;
+  }
+
+  #content h2 {
+   background-color: transparent;
+   border-bottom: 1px solid #D0D0D0;
+   color: #444;
+   font-size: 16px;
+   font-weight: bold;
+   margin: 24px 0 2px 0;
+   padding: 5px 0 6px 0;
+  }
+
+  #content h3 {
+   background-color: transparent;
+   color: #333;
+   font-size: 14px;
+   font-weight: bold;
+   margin: 22px 0 12px 0;
+   padding: 0 0 0 0;
+  }
+
+  #content h4 {
+   background-color: transparent;
+   color: #444;
+   font-size: 14px;
+   font-weight: bold;
+   margin: 22px 0 0 0;
+   padding: 0 0 0 0;
+  }
+
+  #content img {
+   margin: auto;
+   padding: 0;
+  }
+
+  #content code {
+   font-family: Monaco, Verdana, Sans-serif;
+   font-size: 12px;
+   background-color: #f9f9f9;
+   border: 1px solid #D0D0D0;
+   color: #002166;
+   display: block;
+   margin: 14px 0 14px 0;
+   padding: 12px 10px 12px 10px;
+  }
+
+  #content pre {
+   font-family: Monaco, Verdana, Sans-serif;
+   font-size: 12px;
+   background-color: #f9f9f9;
+   border: 1px solid #D0D0D0;
+   color: #002166;
+   display: block;
+   margin: 14px 0 14px 0;
+   padding: 12px 10px 12px 10px;
+  }
+
+  #content .path {
+   background-color: #EBF3EC;
+   border: 1px solid #99BC99;
+   color: #005702;
+   text-align: center;
+   margin: 0 0 14px 0;
+   padding: 5px 10px 5px 8px;
+  }
+
+  #content dfn {
+   font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+   color: #00620C;
+   font-weight: bold;
+   font-style: normal;
+  }
+  #content var {
+   font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+   color: #8F5B00;
+   font-weight: bold;
+   font-style: normal;
+  }
+  #content samp {
+   font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+   color: #480091;
+   font-weight: bold;
+   font-style: normal;
+  }
+  #content kbd {
+   font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+   color: #A70000;
+   font-weight: bold;
+   font-style: normal;
+  }
+
+  #content ul {
+   list-style-image: url(images/arrow.gif);
+   padding: 0 0 0 18px;
+   margin: 8px 0 12px 0;
+  }
+
+  #content li {
+   padding: 0;
+   margin: 0 0 6px 0;
+  }
+
+  #content li p {
+   margin-left: 0;
+   margin-right: 0;
+  }
+
+  #content .tableborder {
+   border: 1px solid #999;
+  }
+  #content th {
+   font-weight: bold;
+   text-align: left;
+   font-size: 12px;
+   background-color: #666;
+   color: #fff;
+   padding: 4px;
+  }
+
+  #content .td {
+   font-weight: normal;
+   font-size: 12px;
+   padding: 6px;
+   background-color: #f3f3f3;
+  }
+
+  #content .tdpackage {
+   font-weight: normal;
+   font-size: 12px;
+  }
+
+  #content .important {
+   background: #FBE6F2;
+   border: 1px solid #D893A1;
+   color: #333;
+   margin: 10px 0 5px 0;
+   padding: 10px;
+  }
+
+  #content .important p {
+   margin: 6px 0 8px 0;
+   padding: 0;
+  }
+
+  #content .important .leftpad {
+   margin: 6px 0 8px 0;
+   padding-left: 20px;
+  }
+
+  #content .critical {
+   background: #FBE6F2;
+   border: 1px solid #E68F8F;
+   color: #333;
+   margin: 10px 0 5px 0;
+   padding: 10px;
+  }
+
+  #content .critical p {
+   margin: 5px 0 6px 0;
+   padding: 0;
+  }
+
+  .center {
+   text-align: center;
+  }
+
+  .nopad {
+   padding:0;
+   border: 0;
+   margin: 0;
+  }
+</style>
+
+<div id="content">
+
+<div id="about">
+<h1>Taggly</h1>
+<p><strong>Taggly is a customizable CI library that makes creating tag clouds a snap.</strong></p>
+
+<h2>Setting-Up Taggly</h2>
+
+<p>Place the <i>Taggly.php</i> library file in the following directory (default libraries directory):</p>
+<code>www-root/system/libraries/</code>
+
+<p>Then, load up the Taggly library as you would with any other CodeIgniter library. There are two possible ways to do this. Directly from within your controller:</p>
+<code>$this->load->library('taggly');</code>
+
+<p>Or, auto-load the Taggly library from within <i>system/application/config/autoload.php</i>:</p>
+<code>$autoload['libraries'] = array('database', 'session', '<strong>taggly</strong>');</code>
+</div>
+
+<br />
+
+<h1>Using Taggly</h1>
+<h2>cloud(<var>$tagsArray</var>, <var>$configArray=""</var>)</h2>
+<p>Generates and returns HTML for a tag-cloud based on data given.</p>
+<p>
+<var>$tagsArray</var>:<br />
+This is a two-dimensional array that contains the data for each tag. The required information is Tag Count, Tag Name
+and Tag URL respectively.
+<code>$tagsArray = array(array($count, $name, $url))</code>
+<p>
+<var>$configArray</var>:<br />
+This is an optional field. It allows you to set configurations within Taggly using an array. See <strong>Configuring Taggly</strong> for available options.
+<p>
+Basic Usage:
+<code>
+$tagsArray = array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;array(10, 'Dog', 'http://dogs.com'),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;array(53, 'Cat', 'http://cats.com')<br />
+);<br /><br />
+echo $this->taggly->cloud($tagsArray);
+</code>
+<p>
+Advanced Usage (passing configurations):
+<code>
+<strong>$configArray</strong> = array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'min_font' => 20,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'max_font' => 60,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'html_start' => '&lt;span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'html_end' => '&lt;/span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'shuffle' => FALSE,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'class' => 'my_tag_class',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'find_Match' => $matchTags,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'match_Class' => 'bold',<br />
+);<br /><br />
+$tagsArray = array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;array(10, 'Dog', 'http://dogs.com'),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;array(53, 'Cat', 'http://cats.com')<br />
+);<br /><br />
+echo $this->taggly->cloud($tagsArray, <strong>$configArray</strong>);
+</code>
+</p>
+<br />
+<h1>Configuring Taggly</h1>
+<h2>config(<var>$configArray</var>)</h2>
+<p>
+<var>$configArray</var>:<br />
+An array containing available Taggly options. The available options are:
+<ul>
+  <li><strong>min_font</strong> - Set minimum tag font size. Must be an integer. Defaults to 12</li>
+  <li><strong>max_font</strong> - Set maximum tag font size. Must be an integer. Defaults to 24</li>
+  <li><strong>html_start</strong> - Put HTML at beggining of each tag. Must be a string.</li>
+  <li><strong>html_end</strong> - Put HTML at end of each tag. Must be a string.</li>
+  <li><strong>shuffle</strong> - Randomly shuffle the tag order. Must be a boolean value. Defaults to TRUE</li>
+  <li><strong>class</strong> - A CSS class name to give each tag. Must be a string. Defaults to 'taggly'</li>
+ <li><strong>find_Match</strong> - Set array of matching Tags. [0]=>blaat etc..</li>
+ <li><strong>match_Class</strong> - A CSS class name for each matching tag.</li>
+</ul>
+<p>
+	With "find_Match" you can find matching tags within your cloud. This enables you to highlight 
+	corresponding tags in the cloud. The "match_Class" option sets the class for a matching tag. 
+	The "find_Match"
+	contains the names of the normal Taggly array:
+	<code>
+		array(10, 'Dog', 'http://dogs.com'),<br />
+	</code>
+	The "find_Match" looks like:
+	<code>
+		$matchTagsArray =array(Cats, 'Dog', 'Birds');
+	</code>
+	
+</p>
+<p>
+Example:
+<code>
+	<br /><br />
+	$matchTagsArray =array(Cats, 'Dog', 'Birds');<br /><br />
+$configArray = array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'min_font' => 20,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'max_font' => 60,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'html_start' => '&lt;span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'html_end' => '&lt;/span&gt;',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'shuffle' => FALSE,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'class' => 'my_tag_class',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'find_Match' => $matchTagsArray,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;'match_Class' =>"boldTag",<br />
+);<br /><br />
+$this->taggly->config($configArray);
+<br /><br />
+$tags1 = array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;array(10, 'Dog', 'http://dogs.com'),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;array(53, 'Cat', 'http://cats.com')<br />
+);<br /><br />
+$tags2 = array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;array(5, 'Fish', 'http://fish.com'),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;array(27, 'Horse', 'http://horse.com')<br />
+);<br /><br />
+echo $this->taggly->cloud($tags1);<br />
+echo $this->taggly->cloud($tags2);
+</code>
+</div></body></html>

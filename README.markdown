@@ -15,6 +15,9 @@ Features
 + index.php removed
 + Jquery Javascript library
 + English & French Translation pre-installed
++ And some more addons non-autoloaded but ready :
++ Tag-clouds
+
 
 Based On
 -------------
@@ -25,6 +28,7 @@ Based On
 + Codeigniter-base-model | http://bitbucket.org/dhorrigan/codeigniter-base-model/
 + 960 Grid System | http://960.gs/
 + Jquery | http://jquery.com/
++ Taggly | http://codeigniter.com/wiki/Taggly/
 
 Installation Guide
 -------------

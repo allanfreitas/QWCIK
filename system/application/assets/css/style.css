@@ -32,3 +32,8 @@ code {
  margin: 14px 0 14px 0;
  padding: 12px 10px 12px 10px;
 }
+
+input {
+	display:block;
+	margin-bottom:5px;
+}
